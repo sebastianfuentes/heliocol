@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
 @import url("grid.min.css");
 @font-face {
   font-family: avenir;
@@ -19,6 +20,9 @@ body {
   color: #444;
   font-family: "Open Sans", Helvetica;
   padding-top: 4em;
+}
+body input:focus {
+  outline: none;
 }
 body a {
   text-decoration: none;
@@ -205,8 +209,97 @@ body .nav-bar.desktop .menu .item a:after {
   left: 0;
   background-color: #f46942;
 }
+.container .blog-feed .blog {
+  width: 100%;
+  min-height: 12em;
+  background-color: #666;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.container .blog-feed .blog:hover .orange-box {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.container .blog-feed .blog .orange-box {
+  background-color: #f46942;
+  width: 120%;
+  height: 12em;
+  display: block;
+  position: absolute;
+  transform: rotate(135deg);
+  left: -50%;
+  top: -5em;
+  z-index: 0;
+  opacity: 0.7;
+}
+.container .blog-feed .blog .title {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  text-transform: uppercase;
+  max-width: 8em;
+  font-size: 0.75em;
+  font-family: avenir;
+  top: 1em;
+  left: 1em;
+  font-weight: 500;
+}
+.container .blog-feed .blog .title:after {
+  content: 'méxico solar';
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  width: 8em;
+}
 .footer {
   background-color: #f0f0f0;
   display: block;
-  height: 7em;
+  padding: 3em 0;
+}
+.footer .social {
+  display: inline-block;
+  float: right;
+  padding-top: 1em;
+}
+.footer .social .network {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 0.5em;
+  border: 3px solid #666;
+  border-radius: 100%;
+  width: 1.7em;
+  height: 1.7em;
+}
+.footer .social .network:hover {
+  border-color: #999;
+  color: #999;
+  transition: all 0.3s;
+}
+.footer .social .network i {
+  display: block;
+  text-align: center;
+  line-height: 1.5em;
+}
+.footer .newsletter {
+  text-transform: uppercase;
+  font-family: avenir;
+  font-weight: 600;
+  display: inline-block;
+}
+.footer .newsletter .inputs {
+  display: block;
+}
+.footer .newsletter .inputs input {
+  display: inline-block;
+  background-color: #d7d7d7;
+  border: none;
+  height: 2em;
+  padding: 0 1em;
+  text-transform: uppercase;
 }
