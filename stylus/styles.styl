@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600");
+@import url("grid.min.css");
+@font-face {
+    font-family: avenir;
+    src: url("..fonts/avenir.otf");
+}
+
+open = "Open Sans", Helvetica
+nav = 4em
+orange = #F46942
+*
+	box-sizing border-box
+html,
+body
+	position: relative
+	height auto
+	margin 0
+	padding 0
+body
+	display block
+	color #444
+	font-family open
+	padding-top nav
+	a
+		text-decoration none
+		color inherit
+		cursor pointer
+		&:visited,
+		&:focus,
+		&:hover
+			text-decoration none
+			color inherit
+	.nav-bar
+		display block
+		background-color #fff
+		position: fixed
+		top 0
+		right 0
+		left 0
+		z-index: 9999
+		box-shadow 0 3px 3px rgba(0, 0, 0, .2)
+		&.desktop
+			width 100%
+			display flex 
+			.logo
+				height nav
+				width 10em
+				display inline-block
+				flex-shrink 1
+			.menu
+				padding 0
+				margin 0
+				flex-grow 1
+				display flex
+				vertical-align top
+				height nav
+				.item
+					display inline-block
+					list-style none
+					flex-grow 1
+					text-align center
+					&:before
+						content ''
+						height 3px
+						display block
+						width 100%
+						background orange
+					&:hover
+						background #fafafa
+						transition all .3s
+						a
+							color orange
+							transition color .3s
+						&:before
+							transition all .3s
+							height 5px
+					a
+						display block
+						width 100%
+						height 100%
+						padding 1.5em 0
+						position: relative
+						text-transform uppercase
+						font-size .8em
+						font-weight 600
+						&:after
+							content ''
+							height 1.5em
+							background #ddd
+							width 1px
+							display block
+							position: absolute
+							right 0px
+							top 1.5em
+.image
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	&.featured
+		height 35em
+		background-color #666
+		width 100%
+.bulletin
+	width 100%
+	position: relative
+	height auto
+	padding 3em 5em
+	&.blue
+		background-color #20318D
+		color #fff
+	.button
+		padding .2em 1.5em
+		font-size 1.3em
+		text-transform uppercase
+		background-color #A5A8B5
+		border-radius 3px
+		display inline-block
+		cursor pointer
+	.additional-info
+		float right
+		padding-top .5em
+		.info
+			padding 0 1em
+			color #fff
+			display inline-block
+			&:last-of-type
+				border-left 1px solid #ddd
+.container
+	padding 3em 5em
+	.leaf
+		position: relative
+		&:after
+			content ''
+			height 10em
+			width 10em
+			position: absolute
+			right -5em
+			top -1em
+			background-image url('../img/leaf.png')
+			background-repeat no-repeat
+			background-size cover
+			opacity .5
+	.upper
+		text-transform uppercase
+	.featured-text
+		color #666
+		text-transform uppercase
+		text-align center
+		font-size 1.7em
+		font-weight bold
+		font-family avenir
+		max-width 30em
+		margin 0 auto
+		padding 1em 0
+		&.orange
+			color orange
+		&.semi
+			font-weight 600
+			font-size 1.3em
+			max-width initial
+			text-align left
+			text-transform none
+	.pre
+		position: relative
+		padding 1em 2em
+		max-width 800px
+		margin 4em auto 7em
+		font-family open
+		font-weight 100
+		&:before
+			content ''
+			width 5px
+			height 100%
+			position: absolute
+			top 0
+			bottom 0
+			left 0
+			background-color orange
+.footer
+	background-color #f0f0f0
+	display block
+	height 7em
