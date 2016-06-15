@@ -9,6 +9,7 @@
 open = "Open Sans", Helvetica
 nav = 4em
 orange = #F46942
+mobile = 800px
 *
 	box-sizing border-box
 html,
@@ -43,6 +44,72 @@ body
 		left 0
 		z-index: 9999
 		box-shadow 0 3px 3px rgba(0, 0, 0, .2)
+		&.mobile
+			display none
+			width 100%
+			.father
+				width 50%
+				display inline-block
+				flex-grow 1
+				height nav
+				&.logo
+					background-color orange
+					min-width 15em
+					.burger
+						display inline-block
+						width 3.8em
+						height nav
+						padding 1em
+						cursor pointer
+						span
+							height 2px
+							margin .5em 0
+							width 100%
+							display block
+							background-color #fff
+							&:nth-child(1)
+								margin-top .25em
+						&.alt
+							span
+								&:nth-child(1)
+									transform rotate(45deg)
+									transform-origin center left
+									transition all .3s
+								&:nth-child(2)
+									opacity 0
+									transition all .2s
+								&:nth-child(3)
+									transform rotate(-45deg)
+									transform-origin center left
+									transition all .2s
+						&.unalt
+							span
+								&:nth-child(1)
+									transform rotate(0)
+									transform-origin center left
+									transition all .3s
+								&:nth-child(2)
+									opacity 1
+									transition all .2s
+								&:nth-child(3)
+									transform rotate(0)
+									transform-origin center left
+									transition all .2s
+					.brandname
+						padding .22em .8em
+						font-weight 700
+						vertical-align top
+						text-align center
+						display inline-block
+						color #fff
+						font-family avenir
+						font-size 1.3em
+						span
+							display block
+							font-size .8em
+							font-weight 600
+			@media screen and (max-width: mobile)
+				display flex
 		&.desktop
 			width 100%
 			display flex 
@@ -96,6 +163,8 @@ body
 							position: absolute
 							right 0px
 							top 1.5em
+			@media screen and (max-width: mobile)
+				display none
 .image
 	background-size cover
 	background-position center center
@@ -120,6 +189,9 @@ body
 		border-radius 3px
 		display inline-block
 		cursor pointer
+		&:hover
+			background-color #6F717D
+			transition all .3s
 	.additional-info
 		float right
 		padding-top .5em

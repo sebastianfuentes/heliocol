@@ -19,6 +19,19 @@
 			<li class="item"><a href="#">Contacto</a></li>
 		</ul>
 	</nav>
+	<nav class="nav-bar mobile">
+		<div class="logo father">
+			<span class="burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+			<span class="brandname">
+				México Solar <span>Heliocol</span>
+			</span>
+		</div>
+		<div class="calculator father"></div>
+	</nav>
 	<div class="image featured" style="background-image: url('img/firstImage.jpg')"></div>
 	<div class="container">
 		<div class="row">
@@ -121,5 +134,18 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		$(".burger").click(function(event) {
+			var $this = $(this);
+			if ($this.hasClass('alt')) {
+				$this.removeClass('alt')
+				$this.addClass('unalt')
+			}else{
+				$this.removeClass('unalt')
+				$this.addClass('alt')
+			}
+
+		});
+	</script>
 </body>
 </html>
