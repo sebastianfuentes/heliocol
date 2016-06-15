@@ -83,23 +83,40 @@ body
 								color #fff
 								font-family avenir
 								font-weight bold
-								&:after
-									content ''
-									height 3px
-									background-color #fff
-									width 100%
-									display block
-									position: absolute
-									bottom 0
-									left 0
-									right 0
+								border-bottom 3px solid #fff
 								&:last-of-type
-									&:after
-										content none
+									border-bottom none
 								&:hover
 									a
 										padding-left .7em
 										transition all .3s
+								&.has-child
+									&:before
+										font-family "FontAwesome"
+										content '\f067'
+										position: absolute
+										right 0
+										font-size 1em
+										top 1em
+										font-weight 100
+										opacity 1
+									&:after
+										font-family "FontAwesome"
+										content '\f068'
+										position: absolute
+										right 0
+										font-size 1em
+										top 1em
+										font-weight 100
+										opacity 0
+									&:hover,
+									&.alt
+										&:before
+											opacity 0
+											transition all .3s
+										&:after
+											opacity 1
+											transition all .3s
 								a
 									color inherit
 						span
