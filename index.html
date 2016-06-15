@@ -6,6 +6,7 @@
 	<title>Heliocol</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src='js/init.js'></script>
 </head>
 	<nav class="nav-bar desktop">
 		<div class="logo"></div>
@@ -25,12 +26,23 @@
 				<span></span>
 				<span></span>
 				<span></span>
+				<ul class="menu">
+					<li class="item"><a href="#">Servicios</a></li>
+					<li class="item"><a href="#">Beneficios</a></li>
+					<li class="item"><a href="#">Sistemas</a></li>
+					<li class="item"><a href="#">Clientes</a></li>
+					<li class="item"><a href="#">Blog</a></li>
+					<li class="item"><a href="#">Calculadora</a></li>
+					<li class="item"><a href="#">Contacto</a></li>
+				</ul>
 			</span>
 			<span class="brandname">
 				México Solar <span>Heliocol</span>
 			</span>
 		</div>
-		<div class="calculator father"></div>
+		<div class="calculator father">
+			<span>calculator</span>
+		</div>
 	</nav>
 	<div class="image featured" style="background-image: url('img/firstImage.jpg')"></div>
 	<div class="container">
@@ -134,18 +146,5 @@
 			</div>
 		</div>
 	</footer>
-	<script>
-		$(".burger").click(function(event) {
-			var $this = $(this);
-			if ($this.hasClass('alt')) {
-				$this.removeClass('alt')
-				$this.addClass('unalt')
-			}else{
-				$this.removeClass('unalt')
-				$this.addClass('alt')
-			}
-
-		});
-	</script>
 </body>
 </html>

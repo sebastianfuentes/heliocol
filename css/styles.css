@@ -48,6 +48,7 @@ body .nav-bar {
 body .nav-bar.mobile {
   display: none;
   width: 100%;
+  cursor: pointer;
 }
 body .nav-bar.mobile .father {
   width: 50%;
@@ -66,6 +67,50 @@ body .nav-bar.mobile .father.logo .burger {
   padding: 1em;
   cursor: pointer;
 }
+body .nav-bar.mobile .father.logo .burger .menu {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: #f46942;
+  left: 0;
+  top: 4em;
+  opacity: 0;
+  z-index: -999;
+  visibility: hidden;
+  margin: 0;
+  padding: 2em 0;
+}
+body .nav-bar.mobile .father.logo .burger .menu .item {
+  list-style: none;
+  padding: 1em 0;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  color: #fff;
+  font-family: avenir;
+  font-weight: bold;
+}
+body .nav-bar.mobile .father.logo .burger .menu .item:after {
+  content: '';
+  height: 3px;
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body .nav-bar.mobile .father.logo .burger .menu .item:last-of-type:after {
+  content: none;
+}
+body .nav-bar.mobile .father.logo .burger .menu .item:hover a {
+  padding-left: 0.7em;
+  transition: all 0.3s;
+}
+body .nav-bar.mobile .father.logo .burger .menu .item a {
+  color: inherit;
+}
 body .nav-bar.mobile .father.logo .burger span {
   height: 2px;
   margin: 0.5em 0;
@@ -75,6 +120,12 @@ body .nav-bar.mobile .father.logo .burger span {
 }
 body .nav-bar.mobile .father.logo .burger span:nth-child(1) {
   margin-top: 0.25em;
+}
+body .nav-bar.mobile .father.logo .burger.alt .menu {
+  opacity: 1;
+  transition: all 0.3s;
+  z-index: 99;
+  visibility: visible;
 }
 body .nav-bar.mobile .father.logo .burger.alt span:nth-child(1) {
   transform: rotate(45deg);
@@ -89,6 +140,12 @@ body .nav-bar.mobile .father.logo .burger.alt span:nth-child(3) {
   transform: rotate(-45deg);
   transform-origin: center left;
   transition: all 0.2s;
+}
+body .nav-bar.mobile .father.logo .burger.unalt .menu {
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -999;
+  visibility: hidden;
 }
 body .nav-bar.mobile .father.logo .burger.unalt span:nth-child(1) {
   transform: rotate(0);
@@ -118,6 +175,26 @@ body .nav-bar.mobile .father.logo .brandname span {
   display: block;
   font-size: 0.8em;
   font-weight: 600;
+}
+body .nav-bar.mobile .father.calculator {
+  color: #f46942;
+  padding: 1.1em;
+  text-align: center;
+  cursor: pointer;
+}
+body .nav-bar.mobile .father.calculator:hover {
+  background-color: #f46942;
+  transition: all 0.3s;
+}
+body .nav-bar.mobile .father.calculator:hover span {
+  color: #fff;
+  transition: all 0.3s;
+}
+body .nav-bar.mobile .father.calculator span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: inherit;
 }
 @media screen and (max-width: 800px) {
   body .nav-bar.mobile {
@@ -250,6 +327,7 @@ body .nav-bar.desktop .menu .item a:after {
   position: absolute;
   right: -5em;
   top: -1em;
+  z-index: -1;
   background-image: url("../img/leaf.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,7 +340,7 @@ body .nav-bar.desktop .menu .item a:after {
   color: #666;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: bold;
   font-family: avenir;
   max-width: 30em;
@@ -274,7 +352,7 @@ body .nav-bar.desktop .menu .item a:after {
 }
 .container .featured-text.semi {
   font-weight: 600;
-  font-size: 1.3em;
+  font-size: 1.2em;
   max-width: initial;
   text-align: left;
   text-transform: none;
